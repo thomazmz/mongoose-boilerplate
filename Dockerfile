@@ -1,12 +1,17 @@
-# Specify the Docker image
+# Specify the Docker base image
 FROM node:alpine
 
 # Specify working directory
 WORKDIR /usr/app
 
-# Install Dependencies
-COPY ./ ./
+# Copy only package json to prevent docker to rebuild it everytime
+COPY package.json .
+
+# Install all the application dependencies
 RUN npm install
+
+# Copy everything else to the working directory
+COPY . .
 
 # Default Command
 CMD ["npm", "start"]
