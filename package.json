@@ -3,7 +3,6 @@
         "express": "*",
         "mongodb": "^3.3.2",
         "mongoose": "^5.7.0",
-        "redis": "*"
     },
     "scripts": {
         "start": "node server.js"
