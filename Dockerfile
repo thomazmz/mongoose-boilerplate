@@ -1,5 +1,5 @@
 # Specify the Docker base image
-FROM node:alpine
+FROM node
 
 # Specify working directory
 WORKDIR /usr/app

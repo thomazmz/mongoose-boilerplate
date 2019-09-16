@@ -10,7 +10,7 @@ const schemaOptions = {
 
 const todoSchema = new Schema({
   title: {type: String, required: true},
-  done: { type: Boolean, default: false}
+  done: {type: Boolean, default: false}
 }, schemaOptions);
 
 
