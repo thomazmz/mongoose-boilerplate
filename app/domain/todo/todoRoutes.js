@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-const Todo = require("../models/todo");
+const Todo = require("./todo");
 
 const router = express.Router();
 
@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
     .exec()
     .then(todos => res.send(todos))
     .catch(err => res.send(err));
-});
+});s
   
 router.post('/', function (req, res) {
     const todo = new Todo(req.body);
