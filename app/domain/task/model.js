@@ -8,12 +8,13 @@ const schemaOptions = {
     }
 }
 
-const todoSchema = new Schema({
+const taskSchema = new Schema({
   title: {type: String, required: true},
-  done: {type: Boolean, default: false}
+  done: {type: Boolean, default: false},
+  author: { type: Schema.Types.ObjectId, ref: 'User' }
 }, schemaOptions);
 
 
-const Todo = mongoose.model('Todo', todoSchema);
+const Task = mongoose.model('Task', taskSchema);
 
-module.exports = Todo;
+module.exports = Task;
