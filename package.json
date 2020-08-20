@@ -1,6 +1,6 @@
 {
     "dependencies": {
-        "bcrypt": "^3.0.6",
+        "bcrypt": "^5.0.0",
         "body-parser": "*",
         "express": "*",
         "express-validator": "^6.2.0",
